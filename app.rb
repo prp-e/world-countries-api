@@ -20,3 +20,8 @@ get '/' do
     @title = "Countries List"
     erb :index 
 end 
+
+get '/countries/:id' do 
+    @country = Country.find(params[:id])
+    erb :show
+end
